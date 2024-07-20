@@ -42,14 +42,20 @@ body{
     width: auto;
     height: 80%;
     resize: none;
-    background-color: #D8DFE8;
+    background-color: #D8DFE8; 
     border-color: #E5E5E5;
     border-radius: 32px;
     color: #0A3871;
+
+    padding: 10%;
 }
-::placeholder{
-    padding-top: 5%;
-    padding-left: 5%;
+
+textarea:focus {
+    border-color: #0A3871; /* Change border color on focus */
+     outline: none; /*Remove default outline (often a blue glow) */
+}
+ ::placeholder{
+    padding:0%;
 }
 .enter-text-seccion-note{
     display: flex;

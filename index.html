@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-mx">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,21 +9,28 @@
 <body>
 
     <main>
-
+        <!-- Logo seccion -->
         <section class="logo-seccion">
             <img src="/assets/Logo.png" alt="Logo Alura" class="logo-seccion-img">
         </section>
+
+        <!-- message box and buttons seccion -->
         <section class="enter-text-seccion">
-            <textarea name="message" id="message" placeholder="Ingresa el mensaje" class="enter-text-seccion-textarea" ></textarea>
+            <!-- message box -->
+            <textarea name="message" id="message_box" placeholder="Ingresa el mensaje" class="enter-text-seccion-textarea" ></textarea>
+            <!-- Note divition -->
             <div class="enter-text-seccion-note">
                 <img src="/assets/bi_exclamation-circle-fill.png" alt="simbolo de Advertencia">
                 <p>Solo introdusca minusculas</p>
             </div>
+            <!-- buttons divition -->
             <div class="enter-text-seccion-button-division">
-                <button class="enter-text-seccion-button-encrip">Encriptar</button>
-                <button class="enter-text-seccion-button-dencrip">Desencriptar</button>
+                <button id="enter-text-seccion-button-encrip" onclick="encriptMessage()">Encriptar</button>
+                <button id="enter-text-seccion-button-dencrip" onclick="dencriptMessage()">Desencriptar</button>
             </div>
         </section>
+
+        <!-- Result Seccion -->
         <section class="result-seccion">
             <div class="result-text-divicion">
                 <p class="result-seccion-p1"></p>
@@ -31,8 +38,7 @@
             <div>
                 <img src="/assets/Muñeco.png" alt="Someone serching" class="result-seccion-image">
                 <p class="result-seccion-p2">
-                    <strong>Ningún mensaje fue encontrado</strong>
-                    <br> Ingresa el texto que deses encriptar o desencriptar
+                    <strong>Ningún mensaje fue encontrado</strong><br> Ingresa el texto que deses encriptar o desencriptar
                 </p>
             </div>
         </section>
@@ -41,5 +47,6 @@
     <footer>
         <p>Made by Juan Mario Ayala</p>
     </footer>
+    <script src="app.js"></script>
 </body>
 </html>

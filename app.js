@@ -7,7 +7,17 @@ function getText(){
     return message;
 }
 
-function encript(letter){
+
+function hideElementsOfResultArea(state=false){
+    let img = document.getElementById("result-any-message-div");
+    if(state){
+        img.style.display = "none";
+    }else{
+        img.style.display = "block";
+    }   
+}
+
+function encrypt(letter){
     if(letter == 'e'){
         return "enter"
     }
@@ -28,56 +38,58 @@ function encript(letter){
     }
 }
 
-function dencript(encriptedMessage){
+function decrypt(encryptedMessage){
     let index = 0;
-    let dencriptedMessage = "";
-    let stringLen = encriptedMessage.length;
+    let decryptedMessage = "";
+    let stringLen = encryptedMessage.length;
     
     while(index < stringLen ){
         //string.substring(startIndex, endIndex)
 
-        if(encriptedMessage.substring(index, index+5) == "enter"){ // five letter of the string
-            dencriptedMessage += "e";
+        if(encryptedMessage.substring(index, index+5) == "enter"){ // five letter of the string
+            decryptedMessage += "e";
             index += 5;
         }
-        else if(encriptedMessage.substring(index, index+5) == "imes" ){
-            dencriptedMessage += "i";
+        else if(encryptedMessage.substring(index, index+5) == "imes" ){
+            decryptedMessage += "i";
             index += 4;
         }
-        else if(encriptedMessage.substring(index, index+4) == "ober" ){
-            dencriptedMessage += "o";
+        else if(encryptedMessage.substring(index, index+4) == "ober" ){
+            decryptedMessage += "o";
             index += 4;
         }
-        else if(encriptedMessage.substring(index, index+4) == "ufat" ){
-            dencriptedMessage += "u";
+        else if(encryptedMessage.substring(index, index+4) == "ufat" ){
+            decryptedMessage += "u";
             index += 4;
         }
-        else if(encriptedMessage.substring(index, index+2) == "ai" ){
-            dencriptedMessage += "a";
+        else if(encryptedMessage.substring(index, index+2) == "ai" ){
+            decryptedMessage += "a";
             index += 2;
         }
         else{
-            dencriptedMessage += encriptedMessage.substring(index,index+1);
+            decryptedMessage += encryptedMessage.substring(index,index+1);
             index ++;
         }
     }
 
-    return dencriptedMessage;
+    return decryptedMessage;
 }
 
-function encriptMessage(){
+function encryptMessage(){
     let message = getText();
     // split string message into char array
     splitMessgeArray = message.split('');
-    // variable to allocate the new encripted messaje
-    let encriptedMessage = "";
+    // variable to allocate the new encrypted messaje
+    let encryptedMessage = "";
     for (let index = 0; index < splitMessgeArray.length; index++) {
-        encriptedMessage += encript(splitMessgeArray[index]);
+        encryptedMessage += encrypt(splitMessgeArray[index]);
     }
-    console.log(encriptedMessage);
+    console.log(encryptedMessage);
+    hideElementsOfResultArea(true);
 }
 
-function dencriptMessage(){
-    let messageDencripted = dencript(getText());
-    console.log(messageDencripted);
+function decryptMessage(){
+    let messageDecrypted = decrypt(getText());
+    console.log(messageDecrypted);
+    hideElementsOfResultArea(true);
 }

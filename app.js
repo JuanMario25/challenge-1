@@ -8,13 +8,28 @@ function getText(){
 }
 
 
-function hideElementsOfResultArea(state=false){
+function hideElementsOfResultArea(state = false){
     let img = document.getElementById("result-any-message-div");
     if(state){
         img.style.display = "none";
     }else{
         img.style.display = "block";
     }   
+}
+
+function enableCopyButton(state = false){
+    let copyButton = document.getElementById("copy-button-divicion");
+    if(state){
+        copyButton.style.display = "flex";
+    }else{
+        copyButton.style.display = "none";
+    }
+
+}
+
+function resizeResultArea(){
+    let resultArea = document.getElementById("result-text-divicion");
+    resultArea.style.height = '85%';
 }
 
 function encrypt(letter){
@@ -86,10 +101,14 @@ function encryptMessage(){
     }
     console.log(encryptedMessage);
     hideElementsOfResultArea(true);
+    enableCopyButton(true);
+    resizeResultArea();
 }
 
 function decryptMessage(){
     let messageDecrypted = decrypt(getText());
     console.log(messageDecrypted);
     hideElementsOfResultArea(true);
+    enableCopyButton(true);
+    resizeResultArea();
 }

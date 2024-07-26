@@ -65,31 +65,37 @@ function decrypt(encryptedMessage){
         //string.substring(startIndex, endIndex)
 
         if(encryptedMessage.substring(index, index+5) == "enter"){ // five letter of the string
+            // console.log(encryptedMessage.substring(index, index+5));
             decryptedMessage += "e";
             index += 5;
         }
-        else if(encryptedMessage.substring(index, index+5) == "imes" ){
+        else if(encryptedMessage.substring(index, index+4) == "imes" ){
+            // console.log(encryptedMessage.substring(index, index+4));
             decryptedMessage += "i";
             index += 4;
         }
         else if(encryptedMessage.substring(index, index+4) == "ober" ){
+            // console.log(encryptedMessage.substring(index, index+4));
             decryptedMessage += "o";
             index += 4;
         }
         else if(encryptedMessage.substring(index, index+4) == "ufat" ){
+            // console.log(encryptedMessage.substring(index, index+4));
             decryptedMessage += "u";
             index += 4;
         }
         else if(encryptedMessage.substring(index, index+2) == "ai" ){
+            // console.log(encryptedMessage.substring(index, index+2));
             decryptedMessage += "a";
             index += 2;
         }
         else{
+            // console.log(encryptedMessage.substring(index, index+1));
             decryptedMessage += encryptedMessage.substring(index,index+1);
             index ++;
         }
+        // console.log(`result --> ${decryptedMessage}`);
     }
-
     return decryptedMessage;
 }
 

@@ -1,10 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 * {
     padding: 0;
     margin:0;
 }
 
+:root{
+    --font-inter: "Inter", sans-serif;
+    /* using defaul font size 16px */
+    --font-size-12: 0.75rem;
+    --font-size-16: 1rem;
+    --font-size-24: 1.5rem;
+    --font-size-32: 2rem;
+
+    --ligth-grey-general-background-color: #E5E5E5;
+    --blue-dark-color-fonts-and-buttons: #0A3871;
+    --white-color-result-seccion-bkground: #FFFFFF;
+    --white-color-fonts: #FFFFFF;
+    --white-color-buttons: #D8DFE8;
+    --gray-400-fonts: #495057;
+    --gray-500-fonts: #343A40;
+
+}
+
 body{
-    background-color:#E5E5E5;
+    background-color:var(--ligth-grey-general-background-color);
     display: flex;
     flex-direction: column;
     margin: 1%;
@@ -44,25 +64,38 @@ body{
     width: auto;
     height: 86%;
     resize: none;
-    background-color: #D8DFE8; 
-    border-color: #E5E5E5;
+    background-color: var(--ligth-grey-general-background-color);
+    border-color: var(--ligth-grey-general-background-color);
     border-radius: 32px;
-    color: #0A3871;
+    color: var(--blue-dark-color-fonts-and-buttons);
     padding: 5%;
+
+    font-family: var(--font-inter);
+    font-size: var(--font-size-32);
+    color: var(--blue-dark-color-fonts-and-buttons);
+    line-height: 150%;
+    text-align: left;
 }
 
 textarea:focus {
-    border-color: #0A3871; /* Change border color on focus */
-     outline: none; /*Remove default outline (often a blue glow) */
+    border-color: var(--blue-dark-color-fonts-and-buttons); /* Change border color on focus */
+    outline: none; /*Remove default outline (often a blue glow) */
 }
  ::placeholder{
-    padding:0%;
-}
+   font-family: var(--font-inter);
+   font-size: var(--font-size-32);
+   color: var(--blue-dark-color-fonts-and-buttons);
+   
+ }
 .enter-text-seccion-note{
     height: 4%;
     display: flex;
     flex-direction: row;
     gap: 10px;
+
+    font-family: var(--font-inter);
+    font-size: var(--font-size-12);
+    color: var(--gray-400-fonts);
 }
 
 .enter-text-seccion-button-division{
@@ -74,18 +107,25 @@ textarea:focus {
 
 #enter-text-seccion-button-encrypt{
     width: 45%;
-    background-color: #0A3871;
-    color: white;
+    background-color: var(--blue-dark-color-fonts-and-buttons);
     border-radius: 24px;
     padding: 2.5%;
+
+    font-family: var(--font-inter);
+    font-size: var(--font-size-12);
+    color: var(--white-color-fonts);
 }
 
 #enter-text-seccion-button-decrypt{
     width: 45%;
-    background-color: #D8DFE8;
-    color: #0A3871;
+    background-color: var(--white-color-buttons);
+    color: var(--blue-dark-color-fonts-and-buttons);
     border-radius: 24px;
     padding: 2.5%;
+
+    font-family: var(--font-inter);
+    font-size: var(--font-size-12);
+    color: var(--blue-dark-color-fonts-and-buttons);
 }
 
 .result-seccion{
@@ -95,27 +135,45 @@ textarea:focus {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: white;
+    background-color: var(--white-color-result-seccion-bkground);
     border-radius: 32px;
     /* padding: 3%; */
     padding-top: 1.5%;
     padding-bottom: 1.5%;
     padding-left: 1%;
     padding-right: 1%;
-
 }
 
 .result-text-div{
     width: 100%;
-    height: 40%;  
+    height: 35%;  
+}
+
+.result-text-div-p1{
+    font-family: var(--font-inter);
+    font-size: var(--font-size-16);
+    color: var(--gray-400-fonts);
+    line-height: 150%;
+    text-align: left;
+    
 }
 
 #result-any-message-div{
-    height: 45%;
+    width: 100%;
+    height: 55%;
 }
-.result-seccion-image{
+.result-any-message-div-image{
     max-width: 100%;
 }
+.result-any-message-div-p2{
+    font-family: var(--font-inter);
+    font-size: var(--font-size-16);
+    color: var(--gray-400-fonts);
+    line-height: 150%;
+}
+
+
+
 .copy-button-div{
     width: 100%;
     height: 10%;
@@ -126,18 +184,22 @@ textarea:focus {
 }
 .copy-result-text-button{
     width: 100%;
-    background-color: #D8DFE8;
-    color: #0A3871;
+    background-color: var(--white-color-buttons);
+    color: var(--blue-dark-color-fonts-and-buttons);
     border-radius: 24px;
     padding-top: 7%;
     padding-bottom: 7%;
+
+    font-family: var(--font-inter);
+    font-size: var(--font-size-12);
+    color: var(--blue-dark-color-fonts-and-buttons);
 }
 
 footer{
-    background-color: #0A3871;
+    background-color: var(--blue-dark-color-fonts-and-buttons);
     border-radius: 32px;
     padding: 1%;
     margin-top: 1%;
     text-align: center;
-    color: white;
+    color: var(--white-color-fonts);
 }

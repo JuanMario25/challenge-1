@@ -24,12 +24,15 @@ function enableCopyButton(state = false){
     }else{
         copyButton.style.display = "none";
     }
-
 }
-
 function resizeResultArea(){
     let resultArea = document.getElementById("result-text-divicion");
-    resultArea.style.height = '85%';
+    resultArea.style.height = '90%';
+}
+
+function enterTextToResultArea(text){
+    let parraghap = document.getElementById("p1");
+    parraghap.innerHTML=`${text}`
 }
 
 function encrypt(letter){
@@ -99,7 +102,7 @@ function encryptMessage(){
     for (let index = 0; index < splitMessgeArray.length; index++) {
         encryptedMessage += encrypt(splitMessgeArray[index]);
     }
-    console.log(encryptedMessage);
+    enterTextToResultArea(encryptedMessage);
     hideElementsOfResultArea(true);
     enableCopyButton(true);
     resizeResultArea();
@@ -107,8 +110,19 @@ function encryptMessage(){
 
 function decryptMessage(){
     let messageDecrypted = decrypt(getText());
-    console.log(messageDecrypted);
+    enterTextToResultArea(messageDecrypted);
     hideElementsOfResultArea(true);
     enableCopyButton(true);
     resizeResultArea();
 }
+
+function copyToClipboard() {
+    // Get the text field
+    var copyText = document.getElementById("p1");
+
+     // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText.textContent);
+  
+    // // Alert the copied text
+    alert("Copied the text: " + copyText.textContent);
+  }

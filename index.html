@@ -17,13 +17,13 @@
         <!-- message box and buttons seccion -->
         <section class="enter-text-seccion">
             <!-- message box -->
-            <textarea name="message" id="message_box" placeholder="Ingresa el mensaje" class="enter-text-seccion-textarea" ></textarea>
-            <!-- Note divition -->
+            <textarea name="message" id="message_box" placeholder="Ingresa el mensaje aqui" class="enter-text-seccion-textarea" ></textarea>
+            <!-- Note divicion -->
             <div class="enter-text-seccion-note">
                 <img src="/assets/bi_exclamation-circle-fill.png" alt="simbolo de Advertencia">
                 <p>Solo introdusca minusculas y sin acentos</p>
             </div>
-            <!-- buttons divition -->
+            <!-- buttons divicion -->
             <div class="enter-text-seccion-button-division">
                 <button id="enter-text-seccion-button-encrypt" onclick="encryptMessage()">Encriptar</button>
                 <button id="enter-text-seccion-button-decrypt" onclick="decryptMessage()">Desencriptar</button>
@@ -33,16 +33,16 @@
         <!-- Result Seccion -->
         <section class="result-seccion">
             <div class="result-text-div" id="result-text-divicion">
-                <p class="result-seccion-p1"></p>
+                <p class="result-text-div-p1" id="p1"></p>
             </div>
             <div id="result-any-message-div">
-                <img src="/assets/Muñeco.png" alt="Someone serching" class="result-seccion-image" >
-                <p class="result-seccion-p2">
+                <img src="/assets/Muñeco.png" alt="Someone serching" class="result-any-message-div-image" >
+                <p class="result-any-message-div-p2">
                     <strong>Ningún mensaje fue encontrado</strong><br> Ingresa el texto que deses encriptar o desencriptar
                 </p>
             </div>
             <div class="copy-button-div" id="copy-button-divicion">
-                <button class="copy-result-text-button">Copiar</button>
+                <button class="copy-result-text-button" onclick="copyToClipboard()">Copiar</button>
             </div>
         </section>
     </main>

@@ -30,39 +30,41 @@ body{
     margin: 1%;
 }
 
-.menu{
-    display: flex;
-    gap: 30px;
-}
 
  main{
+    box-sizing: border-box;
+    height: 26rem;
     display: flex;
-    padding: 1%;
     gap: 2.5%;
-    height: 90vh;
-    padding: 2%;
+    padding: 1%;
 }
 
 .logo-seccion{
+    box-sizing: border-box;
+    width: 7%;
+    height: 95%;
     display: block;
 }
 
 .logo-seccion-img{
-    width: 85%;
+    width: 3rem;
+    height: 2rem;;
 }
 
 .enter-text-seccion{
-    width: 70%;
-    height: 90%;
+    box-sizing:border-box;
+    width: 65%;
+    height: 95%;
     display: flex;
     flex-direction: column;
-    /* gap: 10px; */
+    gap:1%;
     padding-top: 1.5%;
     padding-bottom: 1.5%;
 }
 .enter-text-seccion-textarea{
+    box-sizing:border-box;
     width: auto;
-    height: 86%;
+    height: 80%;
     resize: none;
     background-color: var(--ligth-grey-general-background-color);
     border-color: var(--ligth-grey-general-background-color);
@@ -71,7 +73,7 @@ body{
     padding: 5%;
 
     font-family: var(--font-inter);
-    font-size: var(--font-size-32);
+    font-size: var(--font-size-16);
     color: var(--blue-dark-color-fonts-and-buttons);
     line-height: 150%;
     text-align: left;
@@ -83,25 +85,31 @@ textarea:focus {
 }
  ::placeholder{
    font-family: var(--font-inter);
-   font-size: var(--font-size-32);
+   font-size: var(--font-size-16);
    color: var(--blue-dark-color-fonts-and-buttons);
    
  }
-.enter-text-seccion-note{
+.enter-text-seccion-note-div{
+    box-sizing: border-box;
     height: 4%;
     display: flex;
     flex-direction: row;
     gap: 10px;
-
     font-family: var(--font-inter);
     font-size: var(--font-size-12);
     color: var(--gray-400-fonts);
 }
 
+.enter-text-seccion-note-div-image{
+    width: 1rem;
+    height: 1rem;
+}
 .enter-text-seccion-button-division{
+    box-sizing: border-box;
     width: 100%;
-    height: 10%;
+    height: 16%;
     display: flex;
+    align-items: center;
     gap: 10%;
 }
 
@@ -109,8 +117,7 @@ textarea:focus {
     width: 45%;
     background-color: var(--blue-dark-color-fonts-and-buttons);
     border-radius: 24px;
-    padding: 2.5%;
-
+    padding:2.5%;
     font-family: var(--font-inter);
     font-size: var(--font-size-12);
     color: var(--white-color-fonts);
@@ -122,17 +129,18 @@ textarea:focus {
     color: var(--blue-dark-color-fonts-and-buttons);
     border-radius: 24px;
     padding: 2.5%;
-
     font-family: var(--font-inter);
     font-size: var(--font-size-12);
     color: var(--blue-dark-color-fonts-and-buttons);
 }
 
 .result-seccion{
-    width:23%;
-    height: 90%;
+    box-sizing: border-box;
+    width:28%;
+    height: 95%;
     display: flex;
     flex-direction: column;
+    gap:1%;
     align-items: center;
     text-align: center;
     background-color: var(--white-color-result-seccion-bkground);
@@ -145,8 +153,9 @@ textarea:focus {
 }
 
 .result-text-div{
+    box-sizing: border-box;
     width: 100%;
-    height: 35%;  
+    height: 29%;  
 }
 
 .result-text-div-p1{
@@ -159,15 +168,19 @@ textarea:focus {
 }
 
 #result-any-message-div{
+    box-sizing: border-box;
     width: 100%;
     height: 55%;
+
 }
 .result-any-message-div-image{
-    max-width: 100%;
+    box-sizing: border-box;
+    width: 55%;
+    height: 55%;
 }
 .result-any-message-div-p2{
     font-family: var(--font-inter);
-    font-size: var(--font-size-16);
+    font-size: var(--font-size-12);
     color: var(--gray-400-fonts);
     line-height: 150%;
 }
@@ -175,20 +188,20 @@ textarea:focus {
 
 
 .copy-button-div{
+    box-sizing: border-box;
     width: 100%;
-    height: 10%;
+    height: 16%;
     display: none;
-    flex-direction: column;
     align-items: center;
-    padding-top: 32%; 
 }
 .copy-result-text-button{
+    box-sizing: border-box;
     width: 100%;
     background-color: var(--white-color-buttons);
     color: var(--blue-dark-color-fonts-and-buttons);
     border-radius: 24px;
-    padding-top: 7%;
-    padding-bottom: 7%;
+    padding-top: 6%;
+    padding-bottom: 6%;
 
     font-family: var(--font-inter);
     font-size: var(--font-size-12);
@@ -202,4 +215,68 @@ footer{
     margin-top: 1%;
     text-align: center;
     color: var(--white-color-fonts);
+}
+
+/* @media screen and (min-width: 376px) and (max-width: 768px) { */
+@media screen and (max-width: 768px) { 
+    main{
+        height: 73.5rem;
+        flex-direction: column;
+        padding: 3% 3% 3% 3%;
+    }
+
+    .logo-seccion{
+        width: 100%;
+        height: 5%;
+    }
+
+    .enter-text-seccion{
+        width: 100%;
+        height: 80%;
+    }
+
+    .enter-text-seccion-textarea{
+        width: auto;
+        height: 90%;
+    }
+    .enter-text-seccion-button-division{
+        height: auto;
+    }
+
+    .result-seccion{
+        width:100%;
+        height: auto;
+    }
+    
+    .result-text-div{
+        width: 100%;
+        height: auto;  
+    }
+    
+    #result-any-message-div{
+        
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+    
+    }
+    .result-any-message-div-image{
+        display: none;
+        width: 0%;
+        height: 0%;
+    }
+    
+    .copy-button-div{
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+        display: none;
+        align-items: center;
+    }
+    .copy-result-text-button{
+        
+        padding-top: 2.5%;
+        padding-bottom: 2.5%;
+       
+    }
 }

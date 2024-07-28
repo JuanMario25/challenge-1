@@ -33,7 +33,7 @@ body{
 
  main{
     box-sizing: border-box;
-    height: 26rem;
+    height: 35rem;
     display: flex;
     gap: 2.5%;
     padding: 1%;
